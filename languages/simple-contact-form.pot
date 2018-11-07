@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: block/fields.js:13
+msgid "Name"
+msgstr ""
+
+#: block/fields.js:18
+msgid "Enter your name"
+msgstr ""
+
+#: block/fields.js:23
+msgid "Email"
+msgstr ""
+
+#: block/fields.js:28
+msgid "address@email.com"
+msgstr ""
+
+#: block/fields.js:33
+msgid "Subject"
+msgstr ""
+
+#: block/fields.js:38
+msgid "Enter a subject"
+msgstr ""
+
+#: block/fields.js:43
+msgid "Message"
+msgstr ""
+
+#: block/fields.js:53
+msgid "Enter your message"
+msgstr ""
+
+#: block/fields.js:58
+msgid "Attachment"
+msgstr ""
+
+#: block/fields.js:63
+msgid "Select a File"
+msgstr ""
+
+#: block/fields.js:68
+msgid "Subscribing you accept the privacy informative."
+msgstr ""
+
+#: block/fields.js:73
+msgid "Send Your Inquiry"
+msgstr ""
+
+#: block/index.js:19
+msgid "Contact Form"
+msgstr ""
+
+#: block/index.js:20
+msgid "Add a contact form."
+msgstr ""
+
+#: block/index.js:22
+msgid "contact"
+msgstr ""
+
+#: block/index.js:23
+msgid "form"
+msgstr ""
+
+#: block/inspector.js:104
+msgid "Attachement Settings"
+msgstr ""
+
+#: block/inspector.js:106
+msgid "Enable Attachment"
+msgstr ""
+
+#: block/inspector.js:113
+msgid "Attachment Label"
+msgstr ""
+
+#: block/inspector.js:118
+msgid "Upload Text"
+msgstr ""
+
+#: block/inspector.js:126
+msgid "Subscribe Settings"
+msgstr ""
+
+#: block/inspector.js:128
+msgid "Register Email"
+msgstr ""
+
+#: block/inspector.js:134
+msgid "Register Text"
+msgstr ""
+
+#: block/inspector.js:48
+msgid "Field Labels"
+msgstr ""
+
+#: block/inspector.js:50
+msgid "Name Label"
+msgstr ""
+
+#: block/inspector.js:55
+msgid "Email Label"
+msgstr ""
+
+#: block/inspector.js:60
+msgid "Subject Label"
+msgstr ""
+
+#: block/inspector.js:65
+msgid "Message Label"
+msgstr ""
+
+#: block/inspector.js:70
+msgid "Captcha Label"
+msgstr ""
+
+#: block/inspector.js:75
+msgid "Submit Text"
+msgstr ""
+
+#: block/inspector.js:81
+msgid "Field Placeholders"
+msgstr ""
+
+#: block/inspector.js:83
+msgid "Name Placeholder"
+msgstr ""
+
+#: block/inspector.js:88
+msgid "Email Placeholder"
+msgstr ""
+
+#: block/inspector.js:93
+msgid "Subject Placeholder"
+msgstr ""
+
+#: block/inspector.js:98
+msgid "Message Placeholder"
+msgstr ""

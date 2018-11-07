@@ -1,0 +1,16 @@
+{
+	"name": "simple-contact-form",
+	"description": "A simple contact form",
+	"type": "wordpress-plugin",
+	"license": "GPL2+",
+	"authors": [
+		{
+			"name": "Loïc Blascos"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": "^5.4"
+	}
+}

@@ -1,0 +1,99 @@
+// Gutenberg style
+
+@import 'colors';
+
+// Editor CSS
+#simple-contact-form {
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    .scf-label {
+        margin: 0 0 0.25em 0;
+        padding: 0;
+        color: $dark-color;
+        font-size: 1.125em;
+        font-weight: 700;
+        text-align: initial;
+    }
+
+    .scf-input,
+    .scf-textarea {
+        display: block;
+        height: 40px;
+        width: 100%;
+        margin: 0 0 1.125em;
+        padding: 0.5em;
+        border: 2px solid $border-color;
+        border-radius: 5px;
+        box-shadow: none;
+        color: #bbbbbb;
+        line-height: 1.125em;
+        font-size: 1.125em;
+        font-weight: 400;
+        outline: none;
+        -webkit-appearance: none;
+    }
+
+    .scf-textarea {
+        height: 180px;
+    }
+
+    .scf-button,
+    .scf-submit {
+        display: block;
+        padding: 0.5em 1em;
+        background-color: $dark-color;
+        border: none;
+        border-radius: 5px;
+        color: $light-color;
+        cursor: pointer;
+        text-align: center;
+        -webkit-appearance: none;
+        transition: background-color 0.2s ease;
+
+        &:hover,
+        &:focus {
+            background-color: lighten( $dark-color, 20% );
+        }
+    }
+
+    .scf-submit {
+        height: 56px;
+        width: 100%;
+        line-height: 1.8;
+        font-size: 1.125em;
+        font-weight: 700;
+    }
+
+    .scf-button {
+        display: inline-block;
+        height: 40px;
+        width: auto;
+        line-height: 1.25em;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    .editor-rich-text {
+
+        div,
+        label {
+            opacity: 1;
+        }
+    }
+
+    .scf-checkbox-holder {
+
+        cursor: text;
+
+        input:checked + .scf-checkbox-control:after {
+            content: none;
+        }
+
+        .mce-content-body,
+        .editor-rich-text__tinymce {
+            line-height: 1.325em;
+        }
+    }
+
+}

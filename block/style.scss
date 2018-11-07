@@ -1,0 +1,291 @@
+// Frontend style
+
+@import 'colors';
+
+/* ============================================================
+   Keyframes
+/* ============================================================ */
+
+@keyframes scf-spinning {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes scf-bounce-in {
+	0% {
+		opacity: 0;
+		-webkit-transform:scale(1);
+	}
+	1% {
+		opacity: 0.2;
+		transform:scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform:scale(1);
+	}
+}
+
+/* ============================================================
+   Inputs, textarea, button
+/* ============================================================ */
+
+#simple-contact-form {
+
+    font-size: 16px;
+
+    // Old browsers support (e.g.: IE10)
+    [hidden] {
+        display: none;
+    }
+
+    fieldset {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+    label {
+        margin: 0 0 0.25em 0;
+        padding: 0;
+        color: $dark-color;
+        font-size: 1.125em;
+        font-weight: 700;
+        text-align: initial;
+
+        span {
+            font-weight: 400;
+
+            &[aria-hidden] {
+                color: $red-color;
+            }
+        }
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        position: relative;
+        display: block;
+        height: 40px;
+        width: 100%;
+        margin: 0 0 1.125em;
+        padding: 0.5em;
+        border: 2px solid $border-color;
+        border-radius: 5px;
+        box-shadow: none;
+        line-height: 1.125em;
+        font-size: 1.125em;
+        font-weight: 400;
+        outline: none;
+        -webkit-appearance: none;
+
+        &:focus {
+            border-color: $dark-color;
+            box-shadow: none;
+            color: $dark-color;
+            outline: none;
+        }
+
+        &[aria-invalid="true"] {
+            border-color: $red-color;
+        }
+    }
+
+    input[type="button"],
+    input[type="submit"] {
+        display: block;
+        padding: 0.5em 1em;
+        background-color: $dark-color;
+        border: none;
+        border-radius: 5px;
+        color: $light-color;
+        cursor: pointer;
+        text-align: center;
+        -webkit-appearance: none;
+        transition: background-color 0.2s ease;
+
+        &:hover,
+        &:focus {
+            background-color: lighten( $dark-color, 20% );
+        }
+    }
+
+    input[type="submit"] {
+        height: 56px;
+        width: 100%;
+        line-height: 1.8;
+        font-size: 1.125em;
+        font-weight: 700;
+    }
+
+    input[type="button"] {
+        display: inline-block;
+        height: 40px;
+        width: auto;
+        line-height: 1.25em;
+        font-size: 1em;
+        font-weight: normal;
+    }
+
+    input[type="file"] {
+        position: absolute;
+        visibility: hidden;
+        display: none;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        z-index: -1;
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+
+    textarea {
+        height: 180px;
+    }
+
+}
+
+/* ============================================================
+   Holders, loader, response
+/* ============================================================ */
+
+#simple-contact-form {
+
+    .scf-captcha-holder {
+        display: flex;
+
+        input[name="captcha"] {
+            width: 80px;
+            text-align: center;
+        }
+
+        span {
+            height: 40px;
+            padding: 0 0.5em;
+            line-height: 40px;
+            font-weight: 700;
+        }
+    }
+
+    .scf-attachment-holder {
+        margin: 0 0 1.125em;
+    }
+
+    .scf-checkbox-holder {
+        display: flex;
+        margin: 0 0 1.125em;
+        padding: 0.5em 0;
+        line-height: 1.325em;
+        cursor: pointer;
+
+        input {
+
+            &:checked + .scf-checkbox-control:after{
+                content: "";
+                height: 12px;
+                width: 8px;
+                margin: 2px auto;
+                border: solid $green-color;
+                border-width: 0 2px 2px 0;
+                box-sizing: border-box;
+                transform: rotate(45deg);
+            }
+
+            &:focus + .scf-checkbox-control {
+                border-color: $dark-color;
+            }
+        }
+
+        .scf-checkbox-control {
+            display: flex;
+            flex-shrink: 0;
+            height: 24px;
+            width: 24px;
+			margin: 0 8px 0 0;
+			border: 2px solid $border-color;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .scf-submit-holder {
+
+        position: relative;
+        color: $dark-color;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: calc(50% - 16px);
+            top: calc(50% - 16px);
+            height: 32px;
+            width: 32px;
+            border-top: 3px solid darken( $light-color, 10% );
+            border-right: 3px solid darken( $light-color, 10% );
+            border-bottom: 3px solid darken( $light-color, 10% );
+            border-left: 3px solid transparent;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            will-change: opacity, visibility;
+            transform: translateZ(0);
+        }
+    }
+
+    &.scf-loading {
+
+        input[type="submit"] {
+            overflow: hidden;
+            color: transparent;
+            text-indent: -9999px;
+        }
+
+        .scf-submit-holder {
+
+            &:after {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity .25s ease, visibility .25s ease;
+                animation: scf-spinning 1.1s infinite linear;
+            }
+
+            input[type="submit"]:hover {
+                background-color: $dark-color;
+            }
+        }
+    }
+
+    .scf-response {
+        display: block;
+        margin: 1em 0;
+        padding: .5em 1em;
+        font-size: 1.125em;
+        animation: scf-bounce-in 0.6s cubic-bezier(0.19, 1.59, 0.49, 0.96);
+
+        &.scf-success {
+            background-color: lighten( $green-color, 40% );
+            border-left: 4px $green-color solid;
+        }
+
+        &.scf-error,
+        &.scf-captcha {
+            background-color: lighten( $red-color, 30% );
+            border-left: 4px $red-color solid;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
